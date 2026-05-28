@@ -29,3 +29,23 @@ const playlists = {
     { title: "Nervous", artist: "The Neighbourhood" }
   ]
 };
+
+playlistForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const userName = nameInput.value.trim();
+  const selectedMood = moodSelect.value;
+
+    if (userName.length < 2 || selectedMood === "") {
+    errorMessage.textContent = "Please enter your name and choose a mood.";
+    return;
+  }
+
+  errorMessage.textContent = "";
+
+  localStorage.setItem("lastMood", selectedMood);
+
+  resultTitle.textContent = `${userName}'s ${selectedMood} playlist`;
+
+  changeMoodTheme(selectedMood);
+  createPlaylistCards(selectedMood);
