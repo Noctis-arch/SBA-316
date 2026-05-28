@@ -3,30 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Checkpoint 1: basic page setup -->
-
   <title>Mood Playlist Generator</title>
-
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
   <main class="app">
-
     <section class="hero">
       <h1 id="main-title">Mood Playlist Generator</h1>
-
-      <p>
-        Pick a mood and get a small playlist suggestion based on your vibe.
-      </p>
+      <p>Pick a mood and get a small playlist suggestion based on your vibe.</p>
     </section>
-
-    <!-- Checkpoint 1: created the form layout -->
 
     <section class="form-card">
       <form id="playlist-form">
-
         <label for="name-input">Your name</label>
 
         <input
@@ -47,54 +36,5 @@
           <option value="focus">Focus</option>
         </select>
 
-        <button id="generate-btn" type="submit">
-          Generate Playlist
-        </button>
-
+        <button id="generate-btn" type="submit">Generate Playlist</button>
       </form>
-
-      <p id="error-message"></p>
-    </section>
-
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mood Playlist Generator</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <main class="app">
-    <section class="hero">
-      <h1 id="main-title">Mood Playlist Generator</h1>
-      <p>
-        Pick a mood and get a small playlist suggestion based on your vibe.
-      </p>
-    </section>
-    <section class="form-card">
-      <form id="playlist-form">
-        <label for="name-input">Your name</label>
-        <input
-          type="text"
-          id="name-input"
-          placeholder="Enter your name"
-          required
-          minlength="2"
-        />
-        <label for="mood-select">Choose your mood</label>
-        <select id="mood-select" required>
-          <option value="">-- Pick a mood --</option>
-          <option value="chill">Chill</option>
-          <option value="sad">Sad</option>
-          <option value="hype">Hype</option>
-          <option value="focus">Focus</option>
-        </select>
-        <button id="generate-btn" type="submit">
-          Generate Playlist
-        </button>
-      </form>
-      <p id="error-message"></p>
-    </section>

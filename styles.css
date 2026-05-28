@@ -22,7 +22,6 @@ body {
 
 .hero h1 {
   color: #6d42c7;
-  margin-bottom: 10px;
 }
 
 .form-card,
@@ -38,10 +37,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-label {
-  font-weight: bold;
 }
 
 input,
