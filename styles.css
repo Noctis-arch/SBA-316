@@ -63,3 +63,19 @@ button:hover {
   color: crimson;
   font-weight: bold;
 }
+
+.chill-theme {
+  background: #e8f4ff;
+}
+
+.sad-theme {
+  background: #eef0ff;
+}
+
+.hype-theme {
+  background: #fff0f0;
+}
+
+.focus-theme {
+  background: #f0fff4;
+}

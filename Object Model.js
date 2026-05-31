@@ -49,3 +49,19 @@ playlistForm.addEventListener("submit", function (event) {
 
   changeMoodTheme(selectedMood);
   createPlaylistCards(selectedMood);
+
+  setTimeout(function () {
+    savedMoodText.textContent = `Last mood picked: ${selectedMood}`;
+  }, 300);
+});
+
+function changeMoodTheme(mood) {
+  document.body.classList.remove(
+    "chill-theme",
+    "sad-theme",
+    "hype-theme",
+    "focus-theme"
+  );
+
+  document.body.classList.add(`${mood}-theme`);
+}
