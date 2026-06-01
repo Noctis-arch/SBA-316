@@ -36,7 +36,7 @@ playlistForm.addEventListener("submit", function (event) {
   const userName = nameInput.value.trim();
   const selectedMood = moodSelect.value;
 
-    if (userName.length < 2 || selectedMood === "") {
+  if (userName.length < 2 || selectedMood === "") {
     errorMessage.textContent = "Please enter your name and choose a mood.";
     return;
   }
@@ -64,4 +64,66 @@ function changeMoodTheme(mood) {
   );
 
   document.body.classList.add(`${mood}-theme`);
+}
+
+function createPlaylistCards(mood) {
+  playlistContainer.innerHTML = "";
+
+  const songs = playlists[mood];
+  const fragment = document.createDocumentFragment();
+
+  songs.forEach(function (song) {
+    const songClone = songTemplate.content.cloneNode(true);
+
+    songClone.querySelector(".song-title").textContent = song.title;
+    songClone.querySelector(".song-artist").textContent = song.artist;
+
+    fragment.appendChild(songClone);
+  });
+
+  playlistContainer.appendChild(fragment);
+
+  setupFavoriteButtons();
+  checkDomFamily();
+}
+
+function setupFavoriteButtons() {
+  const favoriteButtons = document.querySelectorAll(".favorite-btn");
+
+  favoriteButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const card = button.parentNode;
+
+      card.classList.toggle("favorite");
+
+      if (card.classList.contains("favorite")) {
+        button.textContent = "Favorited";
+      } else {
+        button.textContent = "Favorite";
+      }
+    });
+  });
+}
+
+const savedMood = localStorage.getItem("lastMood");
+
+if (savedMood) {
+  savedMoodText.textContent = `Last mood picked: ${savedMood}`;
+}
+
+moodSelect.addEventListener("change", function () {
+  nameInput.setAttribute(
+    "placeholder",
+    `Name for your ${moodSelect.value || "mood"} playlist`
+  );
+});
+
+function checkDomFamily() {
+  const firstCard = playlistContainer.firstElementChild;
+  const lastCard = playlistContainer.lastElementChild;
+
+  if (firstCard && lastCard) {
+    firstCard.nextElementSibling;
+    lastCard.parentNode;
+  }
 }

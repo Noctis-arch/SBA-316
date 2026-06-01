@@ -1,0 +1,13 @@
+Mood Playlist Generator
+
+This project is a simple web application that lets a person select a mood and then generate a playlist based on that mood.
+
+The Features I added:
+1. Enter a name and choose a mood
+2. Form validation to prevent empty submissions
+3. Dynamic playlist generation
+4. Mood-based theme changes
+5. Favorite song button interaction
+6. Local storage to remember the last selected mood
+
+If I where able to update this SBA in the future I would add more moods and/or playlists, Possibly let people add their own songs to the list and if possible add a search feature for more music.

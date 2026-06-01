@@ -79,3 +79,29 @@ button:hover {
 .focus-theme {
   background: #f0fff4;
 }
+
+#playlist-container {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.song-card {
+  padding: 15px;
+  border-left: 6px solid #6d42c7;
+  background: #fafafa;
+  border-radius: 10px;
+}
+
+.song-card h3 {
+  margin: 0 0 5px;
+}
+
+.song-card p {
+  margin: 0 0 12px;
+}
+
+.favorite {
+  background: #efe6ff;
+  border-left-color: #9b59ff;
+}
